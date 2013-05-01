@@ -1,0 +1,26 @@
+{
+  "name": "authenticated",
+  "version": "0.1.0",
+  "description": "ensure a request is authenticated",
+  "main": "index.js",
+  "scripts": {
+    "test": "node node_modules/mocha/bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/AgileDiagnosis/authenticated.git"
+  },
+  "keywords": [
+    "authenticated",
+    "connect",
+    "middleware",
+    "logged",
+    "in"
+  ],
+  "author": "Agile Diagnosis <hello@agilediagnosis.com>",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "dotmap": "~0.1.0"
+  }
+}
