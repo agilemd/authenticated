@@ -7,6 +7,7 @@ var getUserId = dot('session.passport.user._id')
 // - if so, copies userId to `req.userId`
 // - otherwise, redirects to login route
 module.exports = authenticated()
+module.exports.or401 = authenticated(fourOhOne)
 module.exports.orElse = authenticated
 
 function authenticated(otherwise) {
@@ -27,4 +28,9 @@ function authenticated(otherwise) {
 function redir(req, res) {
   req.session.returnTo = req.url
   res.redirect('/login')
+}
+
+function fourOhOne(req, res) {
+  res.statusCode = 401
+  res.end()
 }
